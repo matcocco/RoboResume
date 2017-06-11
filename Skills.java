@@ -1,6 +1,11 @@
 
 public class Skills {
 	private String skills;
+	private int PersonId;
+	
+	public int getPersonId(){
+		return PersonId;
+	}
 	public String toString(){
 		return    skills;
 	}
