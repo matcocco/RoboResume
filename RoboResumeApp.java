@@ -118,12 +118,13 @@ public class RoboResumeApp {
 			school.setDegree(sc.nextLine());
 			java.sql.PreparedStatement pstmt1 = null;
 			try {
-				pstmt1 = con.prepareStatement("Insert into Education (Degree) values (?)");
+				pstmt1 = con.prepareStatement("Insert into Education (Degree, PersonId) values (?,?)");
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 					pstmt1.setString(1, (school.getDegree()));
+					pstmt1.setInt(2, (bob.getPersonId()));
 					pstmt1.executeUpdate();
 			schools.add(school);
 		} if (edx == 0){
@@ -139,12 +140,13 @@ public class RoboResumeApp {
 			job.setWork(sc.nextLine());
 			java.sql.PreparedStatement pstmt2 = null;
 			try {
-				pstmt2 = con.prepareStatement("Insert into Experience (Experience) values (?)");
+				pstmt2 = con.prepareStatement("Insert into Experience (Experience, PersonId) values (?,?)");
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 					pstmt2.setString(1, (job.getWork()));
+					pstmt2.setInt(2, (bob.getPersonId()));
 					pstmt2.executeUpdate();
 			jobs.add(job);
 		} 
@@ -157,12 +159,13 @@ public class RoboResumeApp {
 			skl.setSkills(sc.nextLine());
 			java.sql.PreparedStatement pstmt3 = null;
 			try {
-				pstmt3 = con.prepareStatement("Insert into Skills (Skill) values (?)");
+				pstmt3 = con.prepareStatement("Insert into Skills (Skill, PersonId) values (?,?)");
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 					pstmt3.setString(1, (skl.getSkills()));
+					pstmt3.setInt(2, (bob.getPersonId()));
 					pstmt3.executeUpdate();
 			skls.add(skl);
 		}
