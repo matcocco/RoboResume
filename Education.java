@@ -1,6 +1,11 @@
 
 public class Education {
 	private String degree;
+	private int PersonId;
+	
+	public int getPersonId(){
+		return PersonId;
+	}
 	public String toString(){
 		return degree;
 	}
