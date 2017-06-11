@@ -2,10 +2,10 @@
 public class Person {
 	private String name;
 	private String email;
-	private int ID;
+	private int Id;
 	
-	public int getID(){
-		return ID;
+	public int getId(){
+		return Id;
 	}
 	public String toString (){
 		return name + "\n" + email + "\n";
