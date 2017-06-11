@@ -11,17 +11,20 @@ create table Person (
 create table Education (
 	Id int not null auto_increment,
     Degree varchar (2000),
+    PersonId int,
     primary key(Id)
 );
 
 create table Experience (
 	Id int not null auto_increment,
     Experience varchar(2000),
+    PersonId int,
     primary key(Id)
 );
 
 create table Skills (
 	Id int not null auto_increment,
     Skill varchar (2000),
+    PersonId int,
     primary key (Id)
 );
