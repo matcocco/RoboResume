@@ -2,7 +2,7 @@
 public class Person {
 	private String name;
 	private String email;
-	private int Id;
+	private int PersonId;
 	
 	public int getPersonId(){
 		return PersonId;
