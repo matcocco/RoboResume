@@ -4,8 +4,8 @@ public class Person {
 	private String email;
 	private int Id;
 	
-	public int getId(){
-		return Id;
+	public int getPersonId(){
+		return PersonId;
 	}
 	public String toString (){
 		return name + "\n" + email + "\n";
