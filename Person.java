@@ -2,6 +2,11 @@
 public class Person {
 	private String name;
 	private String email;
+	private int ID;
+	
+	public int getID(){
+		return ID;
+	}
 	public String toString (){
 		return name + "\n" + email + "\n";
 	}
