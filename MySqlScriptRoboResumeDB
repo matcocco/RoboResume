@@ -1,4 +1,4 @@
-create DataBase `RoboResumeDB`;
+create database `RoboResumeDB`;
 use  `RoboResumeDB`;
 
 create table Person (
@@ -25,6 +25,8 @@ create table Experience (
 create table Skills (
 	SkillId int not null auto_increment,
     Skill varchar (2000),
-    PersonId int REFERENCES Person(PersonId)
+    PersonId int REFERENCES Person(PersonId),
     primary key (SkillId)
 );
+select * from Skills;
+-- Selects all Skills columns from Skills table in RoboResumeDB
